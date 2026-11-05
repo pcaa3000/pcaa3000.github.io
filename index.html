@@ -5,50 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Pablo Cesar Aquino Ajra — Platform Engineer & Developer focused on AI, automation and cloud infrastructure.">
   <title>Pablo Cesar Aquino Ajra — Platform Engineer & AI/Automation</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pablo Cesar Aquino Ajra — Platform Engineer & AI/Automation">
+  <meta property="og:description" content="I build reliable platforms, automate the repetitive, and integrate AI where it actually moves the needle.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_PE">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Pablo Cesar Aquino Ajra — Platform Engineer & AI/Automation">
+  <meta name="twitter:description" content="I build reliable platforms, automate the repetitive, and integrate AI where it actually moves the needle.">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pablo Cesar Aquino Ajra",
+    "jobTitle": "Platform Engineer",
+    "email": "mailto:pcaa3000@gmail.com",
+    "sameAs": [
+      "https://github.com/pcaa3000",
+      "https://www.linkedin.com/in/pablo-cesar-aquino-ajra/"
+    ],
+    "knowsAbout": ["Platform Engineering", "AWS", "Docker", "Automation", "AI", "Python"]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['Space Grotesk', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              violet: '#8b5cf6',
-              cyan: '#22d3ee',
-              emerald: '#34d399',
-            }
-          }
-        }
-      }
-    }
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="css/tailwind.css">
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js" integrity="sha384-cztVf4nptt4arwI8Ixfn8naubPgxH22BSvA0CuqFUCulIT+dgnb18vSqiZbbPDL1" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-slate-950 text-slate-200 antialiased selection:bg-violet-500/30">
+
+  <a href="#main" class="skip-link" data-es="Saltar al contenido">Skip to content</a>
 
   <nav class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/60 bg-slate-950/80 backdrop-blur-md">
     <div class="site-container">
       <div class="flex h-16 items-center justify-between">
         <a href="#" class="font-display text-lg font-semibold text-slate-100">pcaa<span class="text-violet-400">.dev</span></a>
         <div class="hidden md:flex items-center gap-8">
-          <a href="#about" class="nav-link">About</a>
-          <a href="#stack" class="nav-link">Stack</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#experience" class="nav-link">Experience</a>
-          <a href="#resume" class="nav-link">Resume</a>
-          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#about" class="nav-link" data-es="Sobre mí">About</a>
+          <a href="#stack" class="nav-link" data-es="Stack">Stack</a>
+          <a href="#projects" class="nav-link" data-es="Proyectos">Projects</a>
+          <a href="#experience" class="nav-link" data-es="Experiencia">Experience</a>
+          <a href="#resume" class="nav-link" data-es="CV">Resume</a>
+          <a href="#contact" class="nav-link" data-es="Contacto">Contact</a>
         </div>
-        <span class="hidden md:inline-flex">
+        <span class="hidden md:inline-flex items-center gap-3">
+          <button class="lang-toggle btn btn--nav" aria-label="Switch language / Cambiar idioma">ES</button>
           <a href="#contact" class="btn btn--nav">
             <i data-lucide="mail" class="h-4 w-4"></i>
-            Hire me
+            <span data-es="Contrátame">Hire me</span>
           </a>
         </span>
         <button id="menu-toggle" class="md:hidden p-2 text-slate-300 hover:text-white" aria-label="Open menu">
@@ -58,12 +69,13 @@
     </div>
     <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800/60 bg-slate-950/95 px-4 py-4">
       <div class="flex flex-col gap-4">
-        <a href="#about" class="mobile-nav-link">About</a>
-        <a href="#stack" class="mobile-nav-link">Stack</a>
-        <a href="#projects" class="mobile-nav-link">Projects</a>
-        <a href="#experience" class="mobile-nav-link">Experience</a>
-        <a href="#resume" class="mobile-nav-link">Resume</a>
-        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="#about" class="mobile-nav-link" data-es="Sobre mí">About</a>
+        <a href="#stack" class="mobile-nav-link" data-es="Stack">Stack</a>
+        <a href="#projects" class="mobile-nav-link" data-es="Proyectos">Projects</a>
+        <a href="#experience" class="mobile-nav-link" data-es="Experiencia">Experience</a>
+        <a href="#resume" class="mobile-nav-link" data-es="CV">Resume</a>
+        <a href="#contact" class="mobile-nav-link" data-es="Contacto">Contact</a>
+        <button class="lang-toggle mobile-nav-link text-left" aria-label="Switch language / Cambiar idioma">ES</button>
       </div>
     </div>
   </nav>
@@ -80,7 +92,7 @@
     </div>
   </div>
 
-  <main>
+  <main id="main">
     <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       <div class="absolute inset-0 pointer-events-none">
         <div class="absolute top-1/4 left-1/4 h-72 w-72 rounded-full bg-violet-600/20 blur-3xl"></div>
@@ -88,11 +100,11 @@
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p class="mb-4 text-sm font-medium tracking-widest text-slate-400 uppercase">Platform Engineering · AI · Automation</p>
+        <p class="mb-4 text-sm font-medium tracking-widest text-slate-400 uppercase" data-es="Ingeniería de Plataformas · IA · Automatización">Platform Engineering · AI · Automation</p>
         <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-slate-100 mb-6">
           Pablo Cesar <span class="gradient-text">Aquino Ajra</span>
         </h1>
-        <p class="lead mb-8">
+        <p class="lead mb-8" data-es="Construyo plataformas confiables, automatizo lo repetitivo e integro IA donde realmente hace la diferencia.">
           I build reliable platforms, automate the repetitive, and integrate AI where it actually moves the needle.
         </p>
         <div class="flex flex-wrap justify-center gap-3 mb-10" id="hero-badges">
@@ -117,12 +129,12 @@
         </div>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#projects" class="btn btn--primary">
-            View Projects
+            <span data-es="Ver Proyectos">View Projects</span>
             <i data-lucide="arrow-right" class="h-4 w-4"></i>
           </a>
           <a href="mailto:pcaa3000@gmail.com" class="btn btn--secondary">
             <i data-lucide="mail" class="h-4 w-4"></i>
-            Email Me
+            <span data-es="Escríbeme">Email Me</span>
           </a>
         </div>
       </div>
@@ -132,12 +144,12 @@
       <div class="site-container">
         <div class="grid lg:grid-cols-2 gap-12 items-start">
           <div class="reveal">
-            <p class="eyebrow">About / Philosophy</p>
-            <h2 class="section-title mb-6">Infrastructure, automation and AI working as one system.</h2>
-            <p class="body mb-6">
+            <p class="eyebrow" data-es="Sobre mí / Filosofía">About / Philosophy</p>
+            <h2 class="section-title mb-6" data-es="Infraestructura, automatización e IA trabajando como un solo sistema.">Infrastructure, automation and AI working as one system.</h2>
+            <p class="body mb-6" data-es="Soy Platform Engineer y Developer con una mentalidad de sistemas. Durante años administré el stack de plataformas en Clínica Ricardo Palma (NTC/Canvia): herramientas de service desk, monitoreo y observabilidad, administración de bases de datos y automatización multiplataforma.">
               I am a Platform Engineer and Developer with a systems-first mindset. For years I ran the platform stack at Clínica Ricardo Palma (NTC/Canvia): service-desk tooling, monitoring and observability, database administration, and cross-platform automation.
             </p>
-            <p class="body">
+            <p class="body" data-es="La mayoría de las caídas y demoras no son problemas de tecnología: son problemas de fricción. Mi trabajo elimina esa fricción con contenedores, automatización e IA: pruebas de concepto más rápidas, menos tareas manuales y mayor visibilidad sobre lo que realmente está corriendo.">
               Most outages and delays are not technology problems — they are friction problems. My work removes that friction with containers, automation and AI: faster proof-of-concepts, fewer manual tasks, and clearer visibility into what is actually running.
             </p>
           </div>
@@ -145,27 +157,27 @@
             <div class="reveal about-card glow">
               <div class="flex items-center gap-3 mb-3">
                 <i data-lucide="zap" class="h-6 w-6 text-violet-400"></i>
-                <h3 class="card-title">Faster PoCs</h3>
+                <h3 class="card-title" data-es="PoCs más rápidas">Faster PoCs</h3>
               </div>
-              <p class="body-small">
+              <p class="body-small" data-es="Al contenedorizar GLPI, Metabase y herramientas internas, reduje el tiempo para levantar una prueba de concepto funcional de días a horas.">
                 By containerizing GLPI, Metabase and internal tooling, I cut the time to stand up a working proof-of-concept from days to hours.
               </p>
             </div>
             <div class="reveal about-card">
               <div class="flex items-center gap-3 mb-3">
                 <i data-lucide="eye" class="h-6 w-6 text-cyan-400"></i>
-                <h3 class="card-title">Full Visibility</h3>
+                <h3 class="card-title" data-es="Visibilidad total">Full Visibility</h3>
               </div>
-              <p class="body-small">
+              <p class="body-small" data-es="Implementé monitoreo y observabilidad con Zabbix, Grafana y Loki para que el equipo vea los problemas antes de que los usuarios los reporten.">
                 Built monitoring and observability on Zabbix, Grafana and Loki so the team sees problems before users report them.
               </p>
             </div>
             <div class="reveal about-card">
               <div class="flex items-center gap-3 mb-3">
                 <i data-lucide="cpu" class="h-6 w-6 text-emerald-400"></i>
-                <h3 class="card-title">Automated Toil</h3>
+                <h3 class="card-title" data-es="Trabajo repetitivo automatizado">Automated Toil</h3>
               </div>
-              <p class="body-small">
+              <p class="body-small" data-es="Reemplacé tareas operativas repetitivas — generación de reportes, usuarios de AD, gestión de instancias AWS — con Python, PowerShell y Bash.">
                 Replaced repetitive operating tasks — report generation, AD users, AWS instance management — with Python, PowerShell and Bash.
               </p>
             </div>
@@ -178,15 +190,15 @@
       <div class="site-container">
         <div class="text-center mb-12 reveal">
           <p class="eyebrow">Stack</p>
-          <h2 class="section-title mb-4">Tools I use to ship platforms and automations</h2>
-          <p class="section-subtitle">Click a category to filter the grid.</p>
+          <h2 class="section-title mb-4" data-es="Herramientas que uso para entregar plataformas y automatizaciones">Tools I use to ship platforms and automations</h2>
+          <p class="section-subtitle" data-es="Haz clic en una categoría para filtrar la grilla.">Click a category to filter the grid.</p>
         </div>
         <div class="flex flex-wrap justify-center gap-2 mb-10" data-filter-group="stack">
-          <button data-filter="all" class="filter-tab active bg-violet-600 text-white" aria-pressed="true">All</button>
-          <button data-filter="platform" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false">Platform / Cloud</button>
-          <button data-filter="dev" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false">Development</button>
-          <button data-filter="ai" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false">AI & Agents</button>
-          <button data-filter="automation" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false">Automation</button>
+          <button data-filter="all" class="filter-tab active bg-violet-600 text-white" aria-pressed="true" data-es="Todos">All</button>
+          <button data-filter="platform" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false" data-es="Plataforma / Nube">Platform / Cloud</button>
+          <button data-filter="dev" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false" data-es="Desarrollo">Development</button>
+          <button data-filter="ai" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false" data-es="IA y Agentes">AI & Agents</button>
+          <button data-filter="automation" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false" data-es="Automatización">Automation</button>
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4" data-filter-container="stack">
           <div data-cat="platform" class="filter-card stack-card"><i data-lucide="cloud" class="h-5 w-5 text-cyan-400"></i><span class="text-sm font-medium">AWS</span></div>
@@ -231,25 +243,27 @@
     <section id="projects" class="section section--bordered">
       <div class="site-container">
         <div class="text-center mb-12 reveal">
-          <p class="eyebrow">Projects</p>
-          <h2 class="section-title mb-4">Selected work</h2>
-          <p class="section-subtitle">Real demos and internal platforms I built or shipped. Filter by category.</p>
+          <p class="eyebrow" data-es="Proyectos">Projects</p>
+          <h2 class="section-title mb-4" data-es="Trabajo seleccionado">Selected work</h2>
+          <p class="section-subtitle" data-es="Demos reales y plataformas internas que construí o lancé. Filtra por categoría, navega con el carrusel.">Real demos and internal platforms I built or shipped. Filter by category, browse with the carousel.</p>
         </div>
         <div class="flex flex-wrap justify-center gap-2 mb-10" data-filter-group="projects">
-          <button data-filter="all" class="filter-tab active bg-violet-600 text-white" aria-pressed="true">All</button>
-          <button data-filter="platform" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false">Platform / Cloud</button>
-          <button data-filter="dev" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false">Development</button>
-          <button data-filter="ai" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false">AI & Agents</button>
-          <button data-filter="automation" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false">Automation</button>
+          <button data-filter="all" class="filter-tab active bg-violet-600 text-white" aria-pressed="true" data-es="Todos">All</button>
+          <button data-filter="platform" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false" data-es="Plataforma / Nube">Platform / Cloud</button>
+          <button data-filter="dev" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false" data-es="Desarrollo">Development</button>
+          <button data-filter="ai" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false" data-es="IA y Agentes">AI & Agents</button>
+          <button data-filter="automation" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false" data-es="Automatización">Automation</button>
+          <button data-filter="challenges" class="filter-tab bg-slate-900/50 text-slate-300 hover:border-violet-500" aria-pressed="false" data-es="Retos">Challenges</button>
         </div>
-        <div class="grid md:grid-cols-2 gap-6" data-filter-container="projects">
-          <div data-cat="dev" class="filter-card reveal project-card project-card--violet">
+        <div id="projects-carousel" class="relative">
+          <div id="projects-track" class="carousel-track grid grid-flow-col auto-cols-[100%] md:auto-cols-[calc(50%-0.75rem)] gap-6 overflow-x-auto pb-2 snap-x snap-mandatory" data-filter-container="projects">
+          <div data-cat="dev" class="filter-card reveal project-card snap-start project-card--violet">
             <div class="flex items-start justify-between mb-4">
               <div class="icon-box icon-box--violet"><i data-lucide="layout" class="h-6 w-6 text-violet-400"></i></div>
-              <span class="category-label text-violet-400">Development</span>
+              <span class="category-label text-violet-400" data-es="Desarrollo">Development</span>
             </div>
             <h3 class="project-title">Web Tech Conf 2026 — Landing Page</h3>
-            <p class="body-small mb-4">A modern conference landing page built with v0. Fast, responsive and focused on conversion for a tech event.</p>
+            <p class="body-small mb-4" data-es="Una landing page moderna para conferencia construida con v0. Rápida, responsive y enfocada en conversión para un evento tech.">A modern conference landing page built with v0. Fast, responsive and focused on conversion for a tech event.</p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="tag">v0</span>
               <span class="tag">Next.js</span>
@@ -257,16 +271,16 @@
             </div>
             <div class="flex items-center gap-4">
               <a href="https://github.com/pcaa3000/v0-webtechconf-2026-landing-page" target="_blank" rel="noopener" class="link"><i data-lucide="github" class="h-4 w-4"></i> Repo</a>
-              <a href="https://v0.app/pcaa3000s-projects/v0-web-tech-conf-2026-landing-page" target="_blank" rel="noopener" class="link link--demo"><i data-lucide="external-link" class="h-4 w-4"></i> Live demo</a>
+              <a href="https://v0.app/pcaa3000s-projects/v0-web-tech-conf-2026-landing-page" target="_blank" rel="noopener" class="link link--demo"><i data-lucide="external-link" class="h-4 w-4"></i> <span data-es="Demo en vivo">Live demo</span></a>
             </div>
           </div>
-          <div data-cat="ai" class="filter-card reveal project-card project-card--cyan">
+          <div data-cat="ai" class="filter-card reveal project-card snap-start project-card--cyan">
             <div class="flex items-start justify-between mb-4">
               <div class="icon-box icon-box--cyan"><i data-lucide="brain-circuit" class="h-6 w-6 text-cyan-400"></i></div>
-              <span class="category-label text-cyan-400">AI & Agents</span>
+              <span class="category-label text-cyan-400" data-es="IA y Agentes">AI & Agents</span>
             </div>
             <h3 class="project-title">MedPet — Vet Appointments via WhatsApp & OpenAI</h3>
-            <p class="body-small mb-4">A conversational appointment bot that uses the WhatsApp API and OpenAI to capture and schedule vet consults naturally.</p>
+            <p class="body-small mb-4" data-es="Un bot conversacional de citas que usa la API de WhatsApp y OpenAI para capturar y agendar consultas veterinarias de forma natural.">A conversational appointment bot that uses the WhatsApp API and OpenAI to capture and schedule vet consults naturally.</p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="tag">OpenAI API</span>
               <span class="tag">WhatsApp API</span>
@@ -274,27 +288,27 @@
             </div>
             <a href="https://github.com/pcaa3000/medpet" target="_blank" rel="noopener" class="link"><i data-lucide="github" class="h-4 w-4"></i> Repo</a>
           </div>
-          <div data-cat="automation" class="filter-card reveal project-card project-card--emerald">
+          <div data-cat="automation" class="filter-card reveal project-card snap-start project-card--emerald">
             <div class="flex items-start justify-between mb-4">
               <div class="icon-box icon-box--emerald"><i data-lucide="calendar-check" class="h-6 w-6 text-emerald-400"></i></div>
-              <span class="category-label text-emerald-400">Automation</span>
+              <span class="category-label text-emerald-400" data-es="Automatización">Automation</span>
             </div>
             <h3 class="project-title">Appointment Booking with Make</h3>
-            <p class="body-small mb-4">A public Make scenario that receives booking intent, validates availability and confirms the appointment without manual back-and-forth.</p>
+            <p class="body-small mb-4" data-es="Un escenario público de Make que recibe la intención de reserva, valida disponibilidad y confirma la cita sin idas y vueltas manuales.">A public Make scenario that receives booking intent, validates availability and confirms the appointment without manual back-and-forth.</p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="tag">Make</span>
               <span class="tag">Scheduling</span>
               <span class="tag">Webhooks</span>
             </div>
-            <a href="https://us2.make.com/public/shared-scenario/5uRwZSRP7QM/schedule-appointment" target="_blank" rel="noopener" class="link link--demo"><i data-lucide="external-link" class="h-4 w-4"></i> View scenario</a>
+            <a href="https://us2.make.com/public/shared-scenario/5uRwZSRP7QM/schedule-appointment" target="_blank" rel="noopener" class="link link--demo"><i data-lucide="external-link" class="h-4 w-4"></i> <span data-es="Ver escenario">View scenario</span></a>
           </div>
-          <div data-cat="platform" class="filter-card reveal project-card project-card--violet">
+          <div data-cat="platform" class="filter-card reveal project-card snap-start project-card--violet">
             <div class="flex items-start justify-between mb-4">
               <div class="icon-box icon-box--violet"><i data-lucide="box" class="h-6 w-6 text-violet-400"></i></div>
-              <span class="category-label text-violet-400">Platform / Cloud</span>
+              <span class="category-label text-violet-400" data-es="Plataforma / Nube">Platform / Cloud</span>
             </div>
             <h3 class="project-title">GLPI on Containers</h3>
-            <p class="body-small mb-4">Containerized GLPI deployment to spin up service-desk environments fast. Reduced PoC setup time from days to hours.</p>
+            <p class="body-small mb-4" data-es="Despliegue de GLPI en contenedores para levantar entornos de service desk rápidamente. Redujo el tiempo de setup de PoCs de días a horas.">Containerized GLPI deployment to spin up service-desk environments fast. Reduced PoC setup time from days to hours.</p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="tag">Docker</span>
               <span class="tag">GLPI</span>
@@ -302,18 +316,87 @@
             </div>
             <a href="https://github.com/pcaa3000/glpi" target="_blank" rel="noopener" class="link"><i data-lucide="github" class="h-4 w-4"></i> Repo</a>
           </div>
-          <div data-cat="dev" class="filter-card reveal project-card project-card--violet">
+          <div data-cat="dev" class="filter-card reveal project-card snap-start project-card--violet">
             <div class="flex items-start justify-between mb-4">
               <div class="icon-box icon-box--violet"><i data-lucide="terminal" class="h-6 w-6 text-violet-400"></i></div>
-              <span class="category-label text-violet-400">Development</span>
+              <span class="category-label text-violet-400" data-es="Desarrollo">Development</span>
             </div>
             <h3 class="project-title">TaskManager CLI</h3>
-            <p class="body-small mb-4">A lightweight command-line task manager written in Python. Good for practicing clean CLI patterns and CRUD operations.</p>
+            <p class="body-small mb-4" data-es="Un gestor de tareas por línea de comandos, liviano y escrito en Python. Ideal para practicar patrones de CLI limpios y operaciones CRUD.">A lightweight command-line task manager written in Python. Good for practicing clean CLI patterns and CRUD operations.</p>
             <div class="flex flex-wrap gap-2 mb-5">
               <span class="tag">Python</span>
               <span class="tag">CLI</span>
             </div>
             <a href="https://github.com/pcaa3000/taskmanager" target="_blank" rel="noopener" class="link"><i data-lucide="github" class="h-4 w-4"></i> Repo</a>
+          </div>
+          <div data-cat="dev" class="filter-card reveal project-card snap-start project-card--violet">
+            <div class="flex items-start justify-between mb-4">
+              <div class="icon-box icon-box--violet"><i data-lucide="ghost" class="h-6 w-6 text-violet-400"></i></div>
+              <span class="category-label text-violet-400" data-es="Desarrollo">Development</span>
+            </div>
+            <h3 class="project-title">Flappy Kiro — Kiro Intro Workshop</h3>
+            <p class="body-small mb-4" data-es="Recursos y assets de soporte para el juego Flappy Kiro construido durante el workshop de Kiro sobre desarrollo dirigido por especificaciones (SDD).">Support resources and assets for the Flappy Kiro game built during the Kiro workshop on spec-driven development (SDD).</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag">Kiro</span>
+              <span class="tag">SDD</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a href="https://github.com/pcaa3000/kiro-intro" target="_blank" rel="noopener" class="link"><i data-lucide="github" class="h-4 w-4"></i> Repo</a>
+          </div>
+          <div data-cat="dev" class="filter-card reveal project-card snap-start project-card--cyan">
+            <div class="flex items-start justify-between mb-4">
+              <div class="icon-box icon-box--cyan"><i data-lucide="file-text" class="h-6 w-6 text-cyan-400"></i></div>
+              <span class="category-label text-cyan-400" data-es="Desarrollo">Development</span>
+            </div>
+            <h3 class="project-title">Invoice API</h3>
+            <p class="body-small mb-4" data-es="Un backend REST completo para emitir facturas de un negocio, documentado con OpenAPI y cubierto por tests. Desarrollado para el Máster de Desarrollo con IA.">A complete REST backend for issuing business invoices, documented with OpenAPI and covered by tests. Built for the AI Development Master's program.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag">Express</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">OpenAPI</span>
+            </div>
+            <a href="https://github.com/pcaa3000/invoice-api" target="_blank" rel="noopener" class="link"><i data-lucide="github" class="h-4 w-4"></i> Repo</a>
+          </div>
+          <div data-cat="challenges" class="filter-card reveal project-card snap-start project-card--emerald">
+            <div class="flex items-start justify-between mb-4">
+              <div class="icon-box icon-box--emerald"><i data-lucide="landmark" class="h-6 w-6 text-emerald-400"></i></div>
+              <span class="category-label text-emerald-400" data-es="Retos">Challenges</span>
+            </div>
+            <h3 class="project-title">De la libreta a la caja — Reto Mibanco (Hackathon)</h3>
+            <p class="body-small mb-4" data-es="Web app que convierte mensajes de texto y notas de voz en transacciones (ventas, gastos, fiados), repregunta cuando falta un monto y calcula el flujo de caja semanal de una pequeña negociante.">Web app that turns text and voice notes into transactions (sales, expenses, credit), asks again when an amount is missing, and computes weekly cash flow for a small business owner.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag">Next.js</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Gemini</span>
+            </div>
+            <a href="https://github.com/pcaa3000/retobanacario" target="_blank" rel="noopener" class="link"><i data-lucide="github" class="h-4 w-4"></i> Repo</a>
+          </div>
+          <div data-cat="challenges" class="filter-card reveal project-card snap-start project-card--cyan">
+            <div class="flex items-start justify-between mb-4">
+              <div class="icon-box icon-box--cyan"><i data-lucide="palette" class="h-6 w-6 text-cyan-400"></i></div>
+              <span class="category-label text-cyan-400" data-es="Retos">Challenges</span>
+            </div>
+            <h3 class="project-title">Spirit Colors Game</h3>
+            <p class="body-small mb-4" data-es="Un juego 3D top-down en el navegador: dispara el color correcto para convertir secuestradores en aliados, rescata los 6 espíritus de color y devuelve el color a la ciudad.">A 3D top-down browser game: shoot the right color to convert kidnappers into allies, free the 6 color spirits and bring color back to the city. UI in Spanish.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Three.js</span>
+              <span class="tag">Vite</span>
+            </div>
+            <a href="https://github.com/pcaa3000/spirit-colors-game" target="_blank" rel="noopener" class="link"><i data-lucide="github" class="h-4 w-4"></i> Repo</a>
+          </div>
+          </div>
+          <button id="projects-prev" class="carousel-btn carousel-btn--prev" aria-label="Previous projects">
+            <i data-lucide="chevron-left" class="h-5 w-5"></i>
+          </button>
+          <button id="projects-next" class="carousel-btn carousel-btn--next" aria-label="Next projects">
+            <i data-lucide="chevron-right" class="h-5 w-5"></i>
+          </button>
+          <div class="mt-6 flex items-center justify-center gap-3">
+            <div id="projects-dots" class="flex items-center justify-center gap-2" role="tablist" aria-label="Project pages"></div>
+            <button id="projects-pause" class="carousel-pause" aria-label="Pause autoplay" aria-pressed="false">
+              <i data-lucide="pause" class="h-4 w-4"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -322,8 +405,8 @@
     <section id="experience" class="section section--alt section--bordered">
       <div class="site-container">
         <div class="text-center mb-16 reveal">
-          <p class="eyebrow">Experience</p>
-          <h2 class="section-title">Track record</h2>
+          <p class="eyebrow" data-es="Experiencia">Experience</p>
+          <h2 class="section-title" data-es="Trayectoria">Track record</h2>
         </div>
         <div class="relative">
           <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-slate-800"></div>
@@ -335,40 +418,40 @@
               </div>
               <div class="md:pl-12">
                 <span class="timeline-dot bg-violet-500"></span>
-                <p class="timeline-date text-violet-400">Aug 2018 – Sep 2025</p>
+                <p class="timeline-date text-violet-400" data-es="Ago 2018 – Sep 2025">Aug 2018 – Sep 2025</p>
                 <ul class="body-small list-disc list-inside space-y-1">
-                  <li>Built a service-desk ecosystem (GLPI, Metabase, MeshCentral, LimeSurvey) behind a reverse proxy.</li>
-                  <li>Deployed monitoring and observability with Zabbix, Grafana and Loki.</li>
-                  <li>Automated operating tasks with Python, PowerShell, Bash and Batch.</li>
-                  <li>Managed AWS instances and optimized MsSQL, Oracle and MySQL databases.</li>
+                  <li data-es="Construí un ecosistema de service desk (GLPI, Metabase, MeshCentral, LimeSurvey) detrás de un reverse proxy.">Built a service-desk ecosystem (GLPI, Metabase, MeshCentral, LimeSurvey) behind a reverse proxy.</li>
+                  <li data-es="Desplegué monitoreo y observabilidad con Zabbix, Grafana y Loki.">Deployed monitoring and observability with Zabbix, Grafana and Loki.</li>
+                  <li data-es="Automaticé tareas operativas con Python, PowerShell, Bash y Batch.">Automated operating tasks with Python, PowerShell, Bash and Batch.</li>
+                  <li data-es="Administré instancias AWS y optimicé bases de datos MsSQL, Oracle y MySQL.">Managed AWS instances and optimized MsSQL, Oracle and MySQL databases.</li>
                 </ul>
               </div>
             </div>
             <div class="relative reveal pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8">
               <div class="md:text-right md:pr-12">
-                <h3 class="card-title">Database Administrator</h3>
+                <h3 class="card-title" data-es="Administrador de Base de Datos">Database Administrator</h3>
                 <p class="text-slate-400">Canvia on Clínica Ricardo Palma, Lima</p>
               </div>
               <div class="md:pl-12">
                 <span class="timeline-dot bg-cyan-500"></span>
                 <p class="timeline-date text-cyan-400">Oct 2025 – Nov 2025</p>
                 <ul class="body-small list-disc list-inside space-y-1">
-                  <li>Assessed MsSQL and MySQL database health and performance.</li>
-                  <li>Attended to requirements and incidents with fast response.</li>
+                  <li data-es="Evalué la salud y el rendimiento de bases de datos MsSQL y MySQL.">Assessed MsSQL and MySQL database health and performance.</li>
+                  <li data-es="Atendí requerimientos e incidencias con respuesta rápida.">Attended to requirements and incidents with fast response.</li>
                 </ul>
               </div>
             </div>
             <div class="relative reveal pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8">
               <div class="md:text-right md:pr-12">
-                <h3 class="card-title">Bachelor + Security Diploma</h3>
+                <h3 class="card-title" data-es="Bachiller + Diplomado en Seguridad">Bachelor + Security Diploma</h3>
                 <p class="text-slate-400">UNJBG & UNI, Perú</p>
               </div>
               <div class="md:pl-12">
                 <span class="timeline-dot bg-emerald-500"></span>
                 <p class="timeline-date text-emerald-400">2003 – 2009</p>
                 <ul class="body-small list-disc list-inside space-y-1">
-                  <li>Bachelor in Computer Science and System Engineering.</li>
-                  <li>Diploma in Information Systems Security Management.</li>
+                  <li data-es="Bachiller en Ciencias de la Computación e Ingeniería de Sistemas.">Bachelor in Computer Science and System Engineering.</li>
+                  <li data-es="Diplomado en Gestión de Seguridad de Sistemas de Información.">Diploma in Information Systems Security Management.</li>
                 </ul>
               </div>
             </div>
@@ -377,21 +460,21 @@
         <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
           <div class="cert-card">
             <i data-lucide="award" class="h-6 w-6 mx-auto mb-2 text-violet-400"></i>
-            <p class="text-sm font-medium text-slate-100">Oracle Certified</p>
+            <p class="text-sm font-medium text-slate-100" data-es="Oracle Certified">Oracle Certified</p>
             <p class="text-xs text-slate-500">Database 11g OCP</p>
           </div>
           <div class="cert-card">
             <i data-lucide="cloud" class="h-6 w-6 mx-auto mb-2 text-cyan-400"></i>
-            <p class="text-sm font-medium text-slate-100">Azure Fundamentals</p>
+            <p class="text-sm font-medium text-slate-100" data-es="Azure Fundamentals">Azure Fundamentals</p>
           </div>
           <div class="cert-card">
             <i data-lucide="cloud-cog" class="h-6 w-6 mx-auto mb-2 text-emerald-400"></i>
-            <p class="text-sm font-medium text-slate-100">AWS Cloud Practitioner</p>
+            <p class="text-sm font-medium text-slate-100" data-es="AWS Cloud Practitioner">AWS Cloud Practitioner</p>
           </div>
           <div class="cert-card">
             <i data-lucide="cloud-cog" class="h-6 w-6 mx-auto mb-2 text-violet-400"></i>
             <p class="text-sm font-medium text-slate-100">AWS Solutions Architect</p>
-            <p class="text-xs text-slate-500">Associate</p>
+            <p class="text-xs text-slate-500" data-es="Asociado">Associate</p>
           </div>
         </div>
       </div>
@@ -400,12 +483,12 @@
     <section id="resume" class="section section--bordered">
       <div class="site-container">
         <div class="reveal resume-card">
-          <p class="eyebrow">Resume</p>
-          <h2 class="section-title mb-4">Download my full CV</h2>
-          <p class="section-subtitle section-subtitle--narrow mb-8">Get the complete version with experience, skills, certifications and contact details.</p>
+          <p class="eyebrow" data-es="CV">Resume</p>
+          <h2 class="section-title mb-4" data-es="Descarga mi CV completo">Download my full CV</h2>
+          <p class="section-subtitle section-subtitle--narrow mb-8" data-es="Obtén la versión completa con experiencia, habilidades, certificaciones y datos de contacto.">Get the complete version with experience, skills, certifications and contact details.</p>
           <a href="assets/CV.pdf" target="_blank" rel="noopener noreferrer" download class="btn btn--primary">
             <i data-lucide="download" class="h-5 w-5"></i>
-            Download CV (PDF)
+            <span data-es="Descargar CV (PDF)">Download CV (PDF)</span>
           </a>
         </div>
       </div>
@@ -415,9 +498,9 @@
       <div class="site-container">
         <div class="grid lg:grid-cols-2 gap-12">
           <div class="reveal">
-            <p class="eyebrow">Contact</p>
-            <h2 class="section-title mb-4">Let's build something reliable</h2>
-            <p class="body mb-8">
+            <p class="eyebrow" data-es="Contacto">Contact</p>
+            <h2 class="section-title mb-4" data-es="Construyamos algo confiable">Let's build something reliable</h2>
+            <p class="body mb-8" data-es="Si necesitas un platform engineer que elimine la fricción operativa e incorpore IA y automatización al flujo de trabajo, envíame un email o escríbeme por LinkedIn.">
               If you need a platform engineer who removes operational friction and brings AI and automation into the workflow, send me an email or reach out on LinkedIn.
             </p>
             <div class="space-y-4">
@@ -437,21 +520,24 @@
           </div>
           <div class="reveal form-card">
             <form id="contact-form" class="space-y-4">
+              <input type="hidden" name="access_key" value="431d88e1-ecab-4aaf-baf0-6eafb8971ce4">
+              <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
               <div>
-                <label for="name" class="label">Name</label>
-                <input type="text" id="name" name="name" required class="input" placeholder="Your name">
+                <label for="name" class="label" data-es="Nombre">Name</label>
+                <input type="text" id="name" name="name" required class="input" placeholder="Your name" data-es-ph="Tu nombre">
               </div>
               <div>
                 <label for="email" class="label">Email</label>
-                <input type="email" id="email" name="email" required class="input" placeholder="you@company.com">
+                <input type="email" id="email" name="email" required class="input" placeholder="you@company.com" data-es-ph="tu@empresa.com">
               </div>
               <div>
-                <label for="message" class="label">Message</label>
-                <textarea id="message" name="message" rows="4" required class="input" placeholder="Tell me about the project or role."></textarea>
+                <label for="message" class="label" data-es="Mensaje">Message</label>
+                <textarea id="message" name="message" rows="4" required class="input" placeholder="Tell me about the project or role." data-es-ph="Cuéntame sobre el proyecto o el rol."></textarea>
               </div>
-              <button type="submit" class="btn btn--form">
+              <button type="submit" id="contact-submit" class="btn btn--form" data-es="Enviar mensaje">
                 Send message
               </button>
+              <p id="contact-status" class="text-sm hidden" role="status" aria-live="polite"></p>
             </form>
           </div>
         </div>
@@ -461,7 +547,7 @@
 
   <footer class="py-8 border-t border-slate-900 bg-slate-950">
     <div class="site-container flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-slate-500">&copy; <span id="year"></span> Pablo Cesar Aquino Ajra. All rights reserved.</p>
+      <p class="text-sm text-slate-500">&copy; <span id="year"></span> Pablo Cesar Aquino Ajra. <span data-es="Todos los derechos reservados.">All rights reserved.</span></p>
       <div class="flex items-center gap-6">
         <a href="https://github.com/pcaa3000" target="_blank" rel="noopener" class="footer-link">GitHub</a>
         <a href="https://www.linkedin.com/in/pablo-cesar-aquino-ajra/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>

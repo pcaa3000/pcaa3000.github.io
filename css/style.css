@@ -454,6 +454,25 @@
   50% { opacity: 0; }
 }
 
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 60;
+  border-radius: 0.5rem;
+  background-color: var(--violet-600);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 5rem;
+}
+
 /* Effects */
 .glow {
   box-shadow: 0 0 40px -10px rgba(139, 92, 246, 0.25);
@@ -476,6 +495,93 @@
     transform: none;
     transition: none;
   }
+
+  .carousel-track {
+    scroll-behavior: auto;
+  }
+}
+
+/* Projects carousel */
+.carousel-track {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--slate-700);
+  background-color: rgba(2, 6, 23, 0.85);
+  color: var(--slate-300);
+  transition: color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.carousel-btn:hover {
+  color: #fff;
+  border-color: var(--violet-500);
+}
+
+.carousel-btn[disabled] {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.carousel-btn--prev { left: -0.5rem; }
+.carousel-btn--next { right: -0.5rem; }
+
+/* On touch-sized screens the carousel is swipe-driven; hide the arrows so
+   they never overlap card links. */
+@media (max-width: 767px) {
+  .carousel-btn {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-btn--prev { left: -1.25rem; }
+  .carousel-btn--next { right: -1.25rem; }
+}
+
+.carousel-dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--slate-700);
+  transition: background-color 0.2s, width 0.2s;
+}
+
+.carousel-dot.active {
+  width: 1.5rem;
+  background-color: var(--violet-500);
+}
+
+.carousel-pause {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 9999px;
+  border: 1px solid var(--slate-700);
+  color: var(--slate-400);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.carousel-pause:hover {
+  color: #fff;
+  border-color: var(--violet-500);
 }
 
 .filter-card {

@@ -1,0 +1,13 @@
+{
+  "name": "portafolio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "tailwindcss -i css/tailwind.src.css -o css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i css/tailwind.src.css -o css/tailwind.css --watch",
+    "serve": "python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
