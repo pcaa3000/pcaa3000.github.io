@@ -588,6 +588,12 @@
   transition: all 0.25s ease-out;
 }
 
+/* .stack-card sets display:flex after Tailwind's .hidden utility; the filter
+   needs this to actually hide items. */
+.filter-card.hidden {
+  display: none;
+}
+
 .filter-card:hover {
   transform: translateY(-4px);
 }
